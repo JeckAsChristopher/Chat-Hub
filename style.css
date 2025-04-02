@@ -1,0 +1,149 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f1f3f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Chat Container */
+.chat-container {
+    background-color: #ffffff;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(20px);
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+/* Chat Box */
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #eee;
+    background-color: #f9f9f9;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Message Styling */
+.message {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    animation: fadeInMessage 0.5s ease-out;
+}
+
+.message .timestamp {
+    font-size: 0.8rem;
+    color: #888;
+    margin-left: 10px;
+}
+
+/* Incoming Message */
+.message.incoming {
+    align-self: flex-start;
+    background-color: #e0f7fa;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 75%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Outgoing Message */
+.message.outgoing {
+    align-self: flex-end;
+    background-color: #c8e6c9;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 75%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Area */
+input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus {
+    border: 2px solid #00796b;
+    background-color: #f1f1f1;
+}
+
+/* Send Button */
+button {
+    padding: 12px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+button:active {
+    background-color: #00251a;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInMessage {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,4 +1,4 @@
-const socket = io("https://innovations-clothes-estimate-earth.trycloudflare.com");  // Connect to the server
+const socket = io("https://transparent-numeric-improving-keep.trycloudflare.com");  // Connect to the server
 const messageInput = document.getElementById('messageInput');
 const sendBtn = document.getElementById('sendBtn');
 const chatBox = document.getElementById('chatBox');
